@@ -1,185 +1,83 @@
-/* General Styles */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatMate Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .chat-body {
+            height: 400px;
+            overflow-y: scroll;
+            padding: 15px;
+        }
+        .chat-message {
+            margin-bottom: 10px;
+        }
+        .chat-message.sent {
+            text-align: right;
+        }
+        .chat-message .message {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+        .chat-message.sent .message {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .chat-footer {
+            padding: 15px;
+            border-top: 1px solid #dee2e6;
+        }
+        .chat-footer .input-group {
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+<body>
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
+<div class="chat-container">
+    <div class="chat-header text-center">
+        <h5>ChatMate</h5>
+    </div>
+    <div class="chat-body">
+        <div class="chat-message sent">
+            <span class="message">Hi there! How can I help you today?</span>
+        </div>
+        <div class="chat-message">
+            <span class="message">Hello! I have a question about your services.</span>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Type a message...">
+            <button class="btn btn-primary">Send</button>
+        </div>
+    </div>
+</div>
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h2 {
-    color: #444;
-    margin-bottom: 20px;
-}
-
-
-/* Form Styles */
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-label {
-    font-weight: bold;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-}
-
-input:focus {
-    border-color: #007bff;
-    outline: none;
-    background-color: #fff;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-
-/* Link Styles */
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-/* Table Styles (For User List) */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-thead {
-    background-color: #007bff;
-    color: white;
-}
-
-thead th {
-    padding: 10px;
-    text-align: left;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #ffffff;
-}
-
-tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-tbody td a.button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
-    display: inline-block;
-}
-
-tbody td a.button {
-    background-color: #007bff;
-}
-
-tbody td a.button.danger {
-    background-color: #dc3545;
-}
-
-tbody td a.button:hover {
-    opacity: 0.9;
-}
-
-
-/* Profile Info Styles */
-
-.profile-info {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.profile-info p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    border-radius: 4px;
-    margin-top: 10px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-
-/* Error Message Styles */
-
-.error {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-
-/* Success Message Styles */
-
-.success {
-    color: #28a745;
-    font-size: 14px;
-    margin-top: 10px;
-}
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
