@@ -1,175 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate - Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-
+    <title>ChatMate Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="successModalLabel">Success</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ChatMate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to ChatMate</h1>
+            <p class="lead">Your all-in-one chat and communication solution</p>
+            <a href="#features" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Features</h2>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Intelligent Chatbots</h5>
+                            <p class="card-text">AI-powered chatbots for seamless communication.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    Login successful!
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Real-Time Translation</h5>
+                            <p class="card-text">Communicate in multiple languages effortlessly.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title">Secure Messaging</h5>
+                            <p class="card-text">End-to-end encryption for privacy and security.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <h2>Login to ChatMate</h2>
-        <form action="/login" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <button type="submit">Login</button>
-            <p>Don't have an account? <a href="/register">Register here</a></p>
-        </form>
-    </div>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate - Register</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h2>Create Your ChatMate Account</h2>
-        <form action="/register" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Choose a username" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Create a password" required>
-
-            <button type="submit">Register</button>
-            <p>Already have an account? <a href="/login">Login here</a></p>
-        </form>
-    </div>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate - Profile</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h2>Your Profile</h2>
-        <div class="profile-info">
-            <p><strong>Username:</strong> {{username}}</p>
-            <p><strong>Email:</strong> {{email}}</p>
-            <p><strong>Joined:</strong> {{join_date}}</p>
+    <!-- About Section -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">About ChatMate</h2>
+            <p class="text-center mt-3">ChatMate is an innovative application designed to connect people through intelligent and secure communication. With advanced features such as AI-powered chatbots and real-time translation, ChatMate redefines how you communicate across the globe.</p>
         </div>
-        <a href="/edit-profile" class="button">Edit Profile</a>
-        <a href="/logout" class="button">Logout</a>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form class="mt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 ChatMate. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate - User List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h2>Manage Users</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Example user rows -->
-                <tr>
-                    <td>1</td>
-                    <td>john_doe</td>
-                    <td>john@example.com</td>
-                    <td>
-                        <a href="/edit-user/1" class="button">Edit</a>
-                        <a href="/delete-user/1" class="button danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>jane_doe</td>
-                    <td>jane@example.com</td>
-                    <td>
-                        <a href="/edit-user/2" class="button">Edit</a>
-                        <a href="/delete-user/2" class="button danger">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatMate - Edit Profile</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h2>Edit Your Profile</h2>
-        <form action="/update-profile" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="{{username}}" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="{{email}}" required>
-
-            <button type="submit">Save Changes</button>
-        </form>
-        <a href="/profile" class="button">Cancel</a>
-    </div>
-</body>
-
 </html>
