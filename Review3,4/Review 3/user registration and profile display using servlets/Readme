@@ -1,1 +1,54 @@
+Overview
+This project demonstrates how to implement a simple user registration and profile management system using Java Servlets. Users can register their information via a web form and view their profile after registration. Data is temporarily stored in an HTTP session for demonstration purposes.
 
+Features
+User Registration: A form to collect user details (name, email, and age).
+Profile Display: Displays the user's information after registration.
+Session Management: User data is stored in the session for quick access.
+Servlet-Based Workflow: Implements doGet and doPost methods for handling requests.
+Components
+UserRegistrationServlet:
+
+Handles user registration.
+Displays a registration form when accessed via GET.
+Processes and stores form data in the session when accessed via POST.
+UserProfileServlet:
+
+Displays the user's profile using data stored in the session.
+If no profile data is found, prompts the user to register.
+Static HTML:
+
+index.html: Acts as the landing page with links to register and view the profile.
+Deployment Descriptor (web.xml):
+
+Maps servlet URLs to their respective classes.
+How to Run
+Environment Setup:
+
+Install Java Development Kit (JDK).
+Set up Apache Tomcat or any servlet container.
+Deployment:
+
+Compile the servlets and package the application as a .war file.
+Deploy the .war file in the webapps directory of the servlet container.
+Access the Application:
+
+Open a browser and navigate to http://localhost:8080/your-app-name.
+Use the provided links to register and view the profile.
+Usage
+Register:
+
+Fill out the form with your name, email, and age.
+Submit the form to store the data.
+View Profile:
+
+Navigate to the profile page to view the stored information.
+Future Enhancements
+Integrate a database (e.g., MySQL) for persistent data storage.
+Add input validation and error handling.
+Improve UI with CSS and JavaScript for dynamic behavior.
+Implement session timeout and logout functionality.
+Requirements
+JDK 8 or higher.
+Apache Tomcat 8 or higher.
+A web browser for testing.
