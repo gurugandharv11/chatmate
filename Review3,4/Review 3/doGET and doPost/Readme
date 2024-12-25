@@ -1,1 +1,21 @@
+1. doGet Method
+Purpose: Handles GET requests (e.g., when a user visits the /chat URL in a browser).
+Implementation:
+Set the content type to text/html.
+Return a simple HTML page with a form for sending messages.
+This form submits a POST request to the same servlet. 
 
+
+2. doPost Method
+Purpose: Handles POST requests (e.g., when the form is submitted or a message is sent via AJAX).
+Implementation:
+Extract the user's message using request.getParameter("message").
+Generate a bot response based on the input (this can be expanded with more complex logic).
+Set the content type to application/json to return the response in JSON format.
+Write the JSON response, ensuring proper formatting.
+Example Interaction
+GET Request:
+Visiting http://localhost:8080/chat displays the HTML page with a form.
+POST Request:
+Submitting the form or sending a POST request programmatically (e.g., using JavaScript's fetch) triggers the doPost method.
+The servlet responds with a JSON object containing the bot's message.
