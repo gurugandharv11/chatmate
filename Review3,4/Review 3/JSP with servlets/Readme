@@ -1,1 +1,52 @@
-hh
+This project demonstrates how to integrate JSP (Java Server Pages) with Servlets to create a web application that handles user registration and profile display. The application uses JSP for the front-end views and Servlets for business logic, ensuring a clean separation between the presentation and logic layers.
+
+Features
+User Registration: Collects user details (name, email, age) via a registration form.
+User Profile Display: Shows the user’s profile after successful registration.
+Servlets: Handles form data processing and session management.
+JSP: Displays dynamic content using JSTL and EL.
+Technologies Used
+Java Servlets: Manages business logic and session data.
+JSP (Java Server Pages): Renders dynamic HTML pages.
+JSTL: For control structures like loops and conditions in JSP.
+EL (Expression Language): To access session and request data directly in JSP.
+Directory Structure
+css
+Copy code
+src/
+├── UserRegistrationServlet.java
+├── UserProfileServlet.java
+web/
+├── index.jsp
+├── registration.jsp
+├── profile.jsp
+├── WEB-INF/
+    └── lib/
+        └── jstl.jar
+        └── standard.jar
+Setup and Usage
+Required Software:
+
+JDK: Java Development Kit (8 or above).
+Servlet Container: Apache Tomcat or similar.
+JSTL Library: Include jstl.jar and standard.jar in the WEB-INF/lib directory.
+Deploying the Application:
+
+Compile and deploy the project to a servlet container like Tomcat.
+Access the application via http://localhost:8080/your-app-name.
+Navigating the Application:
+
+Registration: Fill out the form on the registration page (registration.jsp).
+Profile View: After registration, the user can view their profile on profile.jsp.
+How It Works
+Servlets:
+
+UserRegistrationServlet: Processes the registration form and stores user data in the session.
+UserProfileServlet: Fetches user data from the session and forwards to the profile.jsp.
+JSP Pages:
+
+registration.jsp: Displays the registration form and submits the data to the servlet.
+profile.jsp: Uses JSTL and EL to display the user’s profile from session attributes.
+Future Enhancements
+Persistent Storage: Store user data in a database like MySQL.
+Form Validation: Add client-side and server-side validation.
