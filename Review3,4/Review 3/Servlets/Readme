@@ -1,1 +1,17 @@
+KEY POINTS 
+Annotations: Use @WebServlet for simpler configuration.
+Servlet Mapping: Use web.xml for explicit configurations or older Java versions.
+Asynchronous Communication: Combine with AJAX or Fetch API for real-time chat.
+Project Overview
+The ChatMate Application is a simple web-based chat application that demonstrates the use of Java Servlets to handle HTTP requests and responses. Users can send messages through a web form, and the application responds with dynamically generated responses.
 
+Features
+Handle HTTP GET and POST requests using Servlets.
+Dynamically generate chat responses.
+Simple HTML form integration for user input.
+URL mapping and configuration using annotations or web.xml.
+Prerequisites
+Java Development Kit (JDK): Version 8 or later.
+Apache Tomcat: Servlet container for deployment.
+Integrated Development Environment (IDE): Eclipse, IntelliJ IDEA, or any Java-supporting IDE.
+Maven (optional): For dependency management.
