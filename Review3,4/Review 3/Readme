@@ -1,1 +1,43 @@
-review 3
+Objectives
+Create and configure Servlets.
+Implement doGet and doPost methods in Servlets.
+Develop a user form registration and profile system using Servlets.
+Integrate JSP with Servlets.
+Implement JSP pages for displaying user data.
+Utilize JSTL (JavaServer Pages Standard Tag Library) and EL (Expression Language) in JSP pages.
+Project Setup
+Prerequisites
+JDK 8 or later
+Apache Tomcat server
+IDE with Java EE support (e.g., Eclipse, IntelliJ IDEA)
+Maven (optional)
+Installation
+Clone the repository.
+Configure the Tomcat server in your IDE.
+Build and deploy the project to the server.
+Implementation Details
+1. Create and Configure Servlets
+Write Servlets using the HttpServlet class.
+Add necessary @WebServlet annotations or configure the Servlets in web.xml.
+2. Implement doGet and doPost
+Implement the doGet method for handling HTTP GET requests (e.g., fetching data).
+Implement the doPost method for processing form submissions (e.g., saving user data).
+3. User Form Registration and Profile
+Create an HTML/JSP form for user registration.
+Use a Servlet to handle form data submission, validate inputs, and save the profile details.
+4. Integrate JSP with Servlets
+Forward requests from Servlets to JSP for dynamic content generation using RequestDispatcher.
+5. JSP Pages for Displaying User Data
+Create JSP pages to render user profile data dynamically.
+Pass data from the Servlet to JSP using request attributes.
+6. Use JSTL and EL in JSP
+Leverage JSTL for iterating over collections and displaying data.
+Use EL for accessing attributes and expressions directly in JSP.
+Example File Structure
+Usage
+Access the user registration form at <server-url>/userForm.
+Fill in the form and submit to save the data.
+View user details on the profile page.
+Resources
+Java Servlet Documentation
+JSTL Documentation
