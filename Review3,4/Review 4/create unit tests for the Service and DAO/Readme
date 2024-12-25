@@ -1,29 +1,20 @@
-Unit Testing:
+This project demonstrates the implementation of unit tests for the Service and DAO layers of a Java-based application. The goal is to ensure the correctness of business logic and database interactions by isolating each layer and testing their behavior independently. JUnit and Mockito are used for creating the unit tests and mocking dependencies.
 
-Create comprehensive unit tests for both the service layer and data access objects (DAOs).
-Aim for high test coverage to ensure code robustness and reliability.
-Final Review:
+Features:
+DAO Layer Unit Tests:
 
-Conduct a thorough review of the entire project, including code, design, and functionality.
-Address any remaining issues or bugs.
-Ensure all requirements are met and the application functions as expected.
-Documentation:
+UserDAO: Tests for saving and retrieving user data from the database.
+MessageDAO: Tests for storing and retrieving chat messages.
+Mocking of database connections and prepared statements using Mockito for isolated tests without an actual database.
+Service Layer Unit Tests:
 
-Prepare the final project documentation, including:
-User guide
-Developer guide
-System architecture diagrams
-Deployment instructions
-Expected Outcomes:
+UserService: Tests business logic for user registration, login, and validation.
+ChatService: Tests message handling, including sending and displaying messages.
+Mocking of DAO calls to test the service layer independently of database operations.
+Mockito Usage:
 
-A well-tested and stable Chatmate application.
-Complete and informative project documentation.
-Note:
+Mocking database operations in the DAO layer to simulate database behavior and ensure the service logic is tested without dependencies.
+Stubbing methods to return predefined values, ensuring the unit tests are deterministic.
+JUnit Framework:
 
-This README is a general outline. You may need to adapt it based on the specific requirements and scope of your project.
-Consider using a version control system (e.g., Git) to track changes and collaborate effectively.
-Additional Tips:
-
-Use a testing framework (e.g., JUnit for Java) to streamline unit testing.
-Involve other team members in the code review process for a broader perspective.
-Ensure the documentation is clear, concise, and easy to understand.
+Used to define test cases, assertions, and test execution.
